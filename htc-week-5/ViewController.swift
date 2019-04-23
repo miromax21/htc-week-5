@@ -15,12 +15,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         TableView.dataSource = self
         TableView.delegate = self
-//        TableView.translatesAutoresizingMaskIntoConstraints = true
-//        TableView.topAnchor.constraint(equalTo:   view.topAnchor).isActive = true
-//        TableView.leftAnchor.constraint(equalTo:  view.leftAnchor).isActive = true
+       // TableView.translatesAutoresizingMaskIntoConstraints = true
+       // TableView.topAnchor.constraint(equalTo:   view.topAnchor).isActive = true
+       // TableView.leftAnchor.constraint(equalTo:  view.leftAnchor).isActive = true
 //        TableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
 //        TableView.bottomAnchor.constraint(equalTo:view.bottomAnchor).isActive = true
-        
+//
         Data.readTrips(completion: {  [unowned self] in
             self.TableView.reloadData()
         })
@@ -44,7 +44,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return  Data.groupModel.count ?? 0
+        return  Data.groupModel.count
     }
     
     
